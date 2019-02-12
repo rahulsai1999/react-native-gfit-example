@@ -10,7 +10,8 @@
     "moment": "^2.24.0",
     "react": "16.6.3",
     "react-native": "0.58.4",
-    "react-native-google-fit": "^0.7.1"
+    "react-native-google-fit": "^0.7.1",
+    "react-native-progress-circle": "^2.0.1"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",

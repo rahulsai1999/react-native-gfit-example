@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import GoogleFit from 'react-native-google-fit';
+import ProgressCircle from 'react-native-progress-circle'
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -72,6 +73,16 @@ export default class App extends Component{
         <View>
         <Text style={styles.textComp}>Number of Steps Today:</Text>
         <Text style={styles.textComp}>{this.state.UserDetails[0].steps[1].value}</Text>
+        <ProgressCircle
+            percent={(this.state.UserDetails[0].steps[1].value/10000)*100}
+            radius={70}
+            borderWidth={8}
+            color="#3399FF"
+            shadowColor="#999"
+            bgColor="#fff"
+            style={{marginLeft:25}}>
+            <Text style={{ fontSize: 18 }}>{this.state.UserDetails[0].steps[1].value}/10000</Text>
+        </ProgressCircle>
         </View>
       )
     }
